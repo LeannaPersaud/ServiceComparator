@@ -94,6 +94,10 @@ document.getElementById("clearSearch").addEventListener("click", restoreDisplay)
 document.getElementById("searchBar").addEventListener("keyup", function(){
     let terms = document.getElementById("searchBar").value.toLowerCase();
 
+    document.getElementById("noFind").classList.add("d-none");
+    document.getElementById("all-container").classList.remove("d-none");
+    document.getElementById("pin-container").classList.remove("d-none");
+
     searchServices = getUnPinned().filter(function(service){
         let splitWords = service.name.toLowerCase().split(" ");
         return splitWords.some(word => word.startsWith(terms));
@@ -110,7 +114,6 @@ document.getElementById("searchBar").addEventListener("keyup", function(){
         }
         else{
             combinePinned(searchServices);
-            document.getElementById("noFind").classList.add("d-none");
         }
     }
 })
@@ -204,4 +207,5 @@ function getUnPinned(){
 function combinePinned(unpinned){
     let combined = [...getPinned(), ...unpinned];
     displayServices(combined);
+
 }

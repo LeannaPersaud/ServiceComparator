@@ -1,0 +1,62 @@
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {min-height: 100vh;}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #a3b5a9;
+    color: #12343d;
+}
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+    height: auto;
+    padding: 15px;
+    }
+    .row.content {height: auto;} 
+}
+
+.cardImg {
+  aspect-ratio: 4/3;              
+  object-fit: cover;          
+  width: 100%;
+}
+
+.modalImg {
+  max-height: 50vh;              
+  object-fit: cover;          
+}
+
+.card-container{
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card-container:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgb(78, 78, 78);
+    z-index: 10;
+}
+
+.pinBtn{
+    z-index: 15;
+}
+
+.actionBtn{
+    background-color: #12343d;
+    color: #f3f3eb;
+}
+
+.actionBtn:hover{
+    background-color: #e1e08d;
+}
+
+.newbg{
+    background-color: #f3f3eb;
+}
+
+.boldbg{
+    background-color: #a3b5a9;
+}
+

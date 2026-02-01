@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <h2 class="my-4">Filter By Category</h2>
+                <form id="form">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Music" name="category" id="music">
+                        <label class="form-check-label fw-bold" for="music">Music</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Streaming" name="category" id="stream">
+                        <label class="form-check-label fw-bold" for="stream">Streaming</label>
+                    </div>
+                    <div class="mt-4 mx-auto">
+                        <button id="submit-btn" class="btn actionBtn" type="button">Filter Results</button>
+                        <button id="reset-btn" class="btn actionBtn" type="reset">Clear Filters</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-sm-10 newbg">
+                <div class="container mt-5">
+                    <div class="input-group mx-auto mb-5 text-center" style="width: 70%">
+                        <span class="input-group-text"> <i class="bi bi-search"></i> </span>
+                        <input type="type" class="form-control" id="searchBar" placeholder="Search for a service">
+                          <button class="btn actionBtn" type="button" id="clearSearch"><i class="bi bi-x"></i></button>
+                    </div>
+
+                    <h3 class="text-danger text-center mt-5 d-none" id="noFind">No Results Found</h3>
+                </div>
+
+                <div class="container mt-5" id="pin-container">
+                    <h3>Pinned Services</h3>
+                    <hr>
+                    <div class="row g-4" id="pin">
+  
+
+                    </div>
+                </div>
+
+                <div class="container mt-5" id="all-container">
+                    <h3>All Services</h3>
+                    <hr>
+                    <div class="row g-4" id="all">
+  
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="more" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" id="modalContent">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/javascript.js"></script>
+</body>
+</html>
